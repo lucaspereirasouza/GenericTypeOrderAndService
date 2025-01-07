@@ -285,18 +285,21 @@ public class Login extends JFrame {
 		DockerValidation docker = new DockerValidation();
 			try {
 				if (dao.conectar() == null) {
-					if (docker.isDockerInstalled()) {
+					if (
+							//tira essa para dps tlg
+							!
+							docker.isDockerInstalled()) {
 						int c = JOptionPane.showConfirmDialog(null, "Parece que o docker esta instalado, gostaria de inicializar o banco de dados?");
-								if(c==0) {docker.InstallDockerEngine();}
+								if(c==0) {docker.InicializeDockerCompose();}
 					} else {
 						if (!docker.isWindows()) {
 //							JOptionPane.showInternalOptionDialog(contentPane, con, getTitle(), ALLBITS, ABORT, null, getComponentListeners(), clientEntity);
 							JOptionPane.showOptionDialog(null,
-									"Database não encontrada, para instalar no windows, é necessario que voce siga o seguinte link:\nhttps://docs.docker.com/engine/install/",
+									"Database não encontrada, para instalar no windows, é necessario seguir o link a seguir :\nhttps://docs.docker.com/engine/install/",
 									getTitle(), ALLBITS, ABORT, null, getComponentListeners(), clientEntity);
 //							JOptionPane.showMessageDialog(null, "Database não encontrada, para instalar no windows, é necessario que voce siga o seguinte link:\nhttps://docs.docker.com/engine/install/");
 						} else {
-							
+							JOptionPane.showMessageDialog(null, "teste");
 						}
 					}
 					dbicon.setIcon(new ImageIcon(Principal.class.getResource("/img/dboff.png")));

@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import javax.swing.JOptionPane;
 
 public class DockerValidation {
+	public void InicializeDockerCompose() {
+		// docker compose command
+	}
 	public boolean isWindows() {
 		if (System.getProperty("os.name") == "linux") {
 			return false;
