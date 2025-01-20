@@ -14,6 +14,7 @@ import javax.swing.border.EmptyBorder;
 import model.ClientEntity;
 import model.DAO;
 import util.DockerValidation;
+import view.configuration.ConfigurationDialog;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
