@@ -3,6 +3,8 @@ package model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import model.configuration.ConfigurationModel;
+
 public class DAO {
 	private String driver = "com.mysql.cj.jdbc.Driver";
 	private String url = "jdbc:mysql://127.0.0.1:3306/databaseos";
@@ -11,7 +13,7 @@ public class DAO {
 	// Criação de um objeto para uso da classe Connection(JDBC)
 	private Connection con;
 	
-	private Configuration conf;
+	private ConfigurationModel conf;
 	// Insert all configuration inside DAO
 	
 	/**
