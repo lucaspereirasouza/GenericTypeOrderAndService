@@ -6,7 +6,7 @@ import java.util.Objects;
 public class LoginEntity implements Serializable {
 
 	String name;
-	String pasword;
+	String password;
 	String priviledge;
 	
 	
@@ -14,7 +14,7 @@ public class LoginEntity implements Serializable {
 	public LoginEntity(String name, String pasword, String priviledge) {
 		super();
 		this.name = name;
-		this.pasword = pasword;
+		this.password = pasword;
 		this.priviledge = priviledge;
 	}
 
@@ -33,13 +33,13 @@ public class LoginEntity implements Serializable {
 
 
 	public String getPasword() {
-		return pasword;
+		return password;
 	}
 
 
 
 	public void setPasword(String pasword) {
-		this.pasword = pasword;
+		this.password = pasword;
 	}
 
 
@@ -58,14 +58,14 @@ public class LoginEntity implements Serializable {
 
 	@Override
 	public String toString() {
-		return "LoginEntity [name=" + name + ", pasword=" + pasword + ", priviledge=" + priviledge + "]";
+		return "LoginEntity [name=" + name + ", pasword=" + password + ", priviledge=" + priviledge + "]";
 	}
 
 
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, pasword, priviledge);
+		return Objects.hash(name, password, priviledge);
 	}
 
 
@@ -79,7 +79,7 @@ public class LoginEntity implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		LoginEntity other = (LoginEntity) obj;
-		return Objects.equals(name, other.name) && Objects.equals(pasword, other.pasword)
+		return Objects.equals(name, other.name) && Objects.equals(password, other.password)
 				&& Objects.equals(priviledge, other.priviledge);
 	}
 	
