@@ -49,8 +49,6 @@ public class Clientes extends JDialog {
 	private Connection con;
 	private PreparedStatement pst;
 	private ResultSet rs;
-
-	
 	
 	private JTextField txtCep;
 	private JTextField txtNome;
